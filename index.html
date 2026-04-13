@@ -1270,7 +1270,8 @@ every little moment has become a forever memory in our hearts.</p>
       const warning = document.getElementById("audioWarning");
       const birthdaySong = {
         title: "Happy Birthday Instrumental for Dio",
-        url: "audio/happy-birthday.mp3"
+        localUrl: "audio/happy-birthday.mp3",
+        fallbackUrl: "https://www.orangefreesounds.com/wp-content/uploads/2016/08/Happy-birthday-instrumental.mp3"
       };
       let isPlaying = false;
 
@@ -1283,16 +1284,24 @@ every little moment has become a forever memory in our hearts.</p>
       }
 
       async function playBirthdaySong() {
-        audio.src = birthdaySong.url;
+        audio.src = birthdaySong.localUrl;
         warning.textContent = "";
         try {
           await audio.play();
           isPlaying = true;
           setPlayingLabel();
-        } catch (err) {
-          isPlaying = false;
-          setStoppedLabel();
-          warning.textContent = "Couldn't play music. Make sure audio/happy-birthday.mp3 exists.";
+        } catch (firstErr) {
+          audio.src = birthdaySong.fallbackUrl;
+          try {
+            await audio.play();
+            isPlaying = true;
+            setPlayingLabel();
+            warning.textContent = "Using online fallback music.";
+          } catch (secondErr) {
+            isPlaying = false;
+            setStoppedLabel();
+            warning.textContent = "Couldn't play music. Check browser autoplay permission.";
+          }
         }
       }
 
@@ -1314,7 +1323,7 @@ every little moment has become a forever memory in our hearts.</p>
       audio.addEventListener("error", () => {
         isPlaying = false;
         setStoppedLabel();
-        warning.textContent = "Audio file missing: upload audio/happy-birthday.mp3";
+        warning.textContent = "Music error. Keep audio/happy-birthday.mp3 or allow internet fallback.";
       });
 
       audio.addEventListener("pause", () => {
@@ -1475,6 +1484,13 @@ every little moment has become a forever memory in our hearts.</p>
           const exists = await checkImage(path);
           if (exists) result.push(path);
         }
+        if (!result.length) {
+          return [
+            "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=1200&q=80"
+          ];
+        }
         return result;
       }
 
@@ -1575,18 +1591,10 @@ every little moment has become a forever memory in our hearts.</p>
 
       gatherLocalImages().then((found) => {
         images = found;
-        if (!images.length) {
-          galleryNote.textContent = "No local photos found yet. Add images/dio1.jpg, dio2.jpg ... up to dio8.jpg";
-          slideCaption.textContent = "Waiting for your local photos";
-          slideImage.style.opacity = "0.25";
-          slidePrev.style.display = "none";
-          slideNext.style.display = "none";
-          slidePlayPause.style.display = "none";
-          slideShuffle.style.display = "none";
-          slideProgressBar.style.width = "0%";
-          return;
-        }
-        galleryNote.textContent = "Loaded " + images.length + " local photo(s) from your folder";
+        const usingFallback = images[0] && images[0].startsWith("http");
+        galleryNote.textContent = usingFallback
+          ? "Using online photo fallback for Vercel preview."
+          : "Loaded " + images.length + " local photo(s) from your folder";
         current = 0;
         renderDots();
         renderSlide();
