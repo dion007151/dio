@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 2 Months Dio ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink: #f8d7da;
+      --cream: #fff7e6;
+      --yellow: #fff4bf;
+      --blue: #dbefff;
+      --rose: #e89aac;
+      --text: #5b4a4f;
+      --white-glass: rgba(255, 255, 255, 0.58);
+      --soft-shadow: 0 12px 35px rgba(136, 94, 112, 0.12);
+      --glow: 0 0 28px rgba(255, 199, 211, 0.58);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: linear-gradient(145deg, var(--cream) 0%, var(--pink) 35%, var(--yellow) 68%, var(--blue) 100%);
+      overflow-x: hidden;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .intro-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 50% 35%, rgba(255, 243, 246, 0.96), rgba(248, 215, 218, 0.95));
+      transition: opacity 0.85s ease, visibility 0.85s ease;
+    }
+
+    .intro-overlay.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .intro-content {
+      text-align: center;
+      color: #694a56;
+      padding: 1.2rem;
+    }
+
+    .intro-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      margin-bottom: 0.65rem;
+    }
+
+    .intro-sub {
+      font-family: "Quicksand", sans-serif;
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      opacity: 0.9;
+    }
+
+    .background-glow {
+      position: fixed;
+      inset: -20% -10%;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 213, 223, 0.45), transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(219, 239, 255, 0.5), transparent 40%),
+        radial-gradient(circle at 50% 85%, rgba(255, 244, 191, 0.45), transparent 45%);
+      filter: blur(30px);
+      z-index: -3;
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+
+    .sparkles {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image:
+        radial-gradient(circle at 15% 25%, #ffffff 1px, transparent 2px),
+        radial-gradient(circle at 75% 45%, #fffaf3 1px, transparent 2px),
+        radial-gradient(circle at 40% 80%, #ffffff 1px, transparent 2px),
+        radial-gradient(circle at 90% 20%, #ffffff 1px, transparent 2px);
+      background-size: 180px 180px;
+      animation: twinkle 5s linear infinite;
+    }
+
+    @keyframes drift {
+      from { transform: translateY(-1.5%) translateX(-1%); }
+      to { transform: translateY(1.5%) translateX(1%); }
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.18; }
+      50% { opacity: 0.4; }
+      to { opacity: 0.18; }
+    }
+
+    .floating-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .hearts {
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      opacity: 0.45;
+      transform: rotate(45deg);
+      animation: floatUp linear infinite;
+      filter: drop-shadow(0 0 6px rgba(255, 182, 193, 0.45));
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: inherit;
+    }
+
+    .heart::before { left: -7px; }
+    .heart::after { top: -7px; }
+
+    .bubbles {
+      z-index: -1;
+    }
+
+    .balloons {
+      z-index: -1;
+    }
+
+    .bubble {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.55);
+      animation: bubbleUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(105vh) rotate(45deg) scale(0.8);
+        opacity: 0;
+      }
+      15% { opacity: 0.5; }
+      85% { opacity: 0.45; }
+      100% {
+        transform: translateY(-15vh) rotate(45deg) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    @keyframes bubbleUp {
+      0% {
+        transform: translateY(102vh) scale(0.7);
+        opacity: 0;
+      }
+      20% { opacity: 0.35; }
+      80% { opacity: 0.3; }
+      100% {
+        transform: translateY(-12vh) scale(1.15);
+        opacity: 0;
+      }
+    }
+
+    .balloon {
+      position: absolute;
+      width: 22px;
+      height: 28px;
+      border-radius: 50% 50% 45% 45%;
+      opacity: 0.42;
+      animation: balloonRise linear infinite;
+      box-shadow: inset -4px -5px 0 rgba(255, 255, 255, 0.24);
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 24px;
+      left: 50%;
+      top: 100%;
+      background: rgba(140, 95, 111, 0.45);
+      transform: translateX(-50%);
+    }
+
+    @keyframes balloonRise {
+      0% {
+        transform: translateY(105vh) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      20% { opacity: 0.45; }
+      100% {
+        transform: translateY(-16vh) translateX(14px) rotate(4deg);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      width: min(1060px, 92%);
+      margin: 0 auto;
+      padding: 1rem 0 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .audio-control {
+      position: sticky;
+      top: 1rem;
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      z-index: 10;
+      margin-bottom: 0.5rem;
+    }
+
+    .audio-btn {
+      border: none;
+      background: rgba(255, 255, 255, 0.8);
+      color: #7b5964;
+      box-shadow: var(--soft-shadow);
+      border-radius: 999px;
+      padding: 0.65rem 1rem;
+      font-family: "Quicksand", sans-serif;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .audio-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(128, 80, 98, 0.16);
+    }
+
+    .surprise-btn {
+      background: linear-gradient(120deg, #ffd3e1, #ffe8b8);
+      color: #6b4855;
+      font-weight: 700;
+    }
+
+    .surprise-pop {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      width: min(320px, calc(100vw - 2rem));
+      background: rgba(255, 255, 255, 0.93);
+      border: 1px solid rgba(255, 220, 231, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 14px 36px rgba(110, 72, 87, 0.2);
+      padding: 0.9rem 0.95rem;
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.35s ease;
+      z-index: 35;
+    }
+
+    .surprise-pop.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .surprise-pop h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      color: #6f4e59;
+      margin-bottom: 0.3rem;
+    }
+
+    .surprise-pop p {
+      font-size: 0.93rem;
+      color: #785a65;
+      margin-bottom: 0.65rem;
+      white-space: normal;
+    }
+
+    .audio-warning {
+      margin-top: 0.45rem;
+      font-size: 0.84rem;
+      color: #9a5d6e;
+      font-family: "Quicksand", sans-serif;
+      text-align: right;
+      min-height: 1.1rem;
+    }
+
+    .confetti-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 34;
+      overflow: hidden;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 8px;
+      height: 14px;
+      opacity: 0.92;
+      animation: confettiFall linear forwards;
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 1; }
+      100% {
+        transform: translateY(105vh) rotate(540deg);
+        opacity: 0.2;
+      }
+    }
+
+    .web-audio {
+      display: none;
+    }
+
+    .countdown-pill {
+      margin: 1rem auto 0;
+      width: fit-content;
+      background: rgba(255, 255, 255, 0.8);
+      color: #7a5360;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      padding: 0.48rem 0.9rem;
+      font-family: "Quicksand", sans-serif;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 20px rgba(126, 85, 101, 0.11);
+    }
+
+    .hero {
+      min-height: 86vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 2.8rem 0 1.6rem;
+    }
+
+    .hero-card {
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.48);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 26px;
+      box-shadow: var(--soft-shadow), var(--glow);
+      padding: clamp(1.8rem, 3vw, 3rem);
+      max-width: 860px;
+      animation: heroIn 1.4s ease both;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "✨";
+      position: absolute;
+      right: 1rem;
+      top: 0.7rem;
+      font-size: 1.4rem;
+      animation: pulseStar 2.6s ease-in-out infinite;
+    }
+
+    @keyframes pulseStar {
+      0%, 100% { transform: scale(0.95); opacity: 0.65; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+
+    @keyframes heroIn {
+      from { transform: translateY(16px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.4px;
+      color: #5a3f49;
+      text-shadow: 0 2px 10px rgba(255, 230, 236, 0.9);
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 500;
+      color: #6f5962;
+      margin-bottom: 1.2rem;
+    }
+
+    .soft-line {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #765961;
+      font-style: italic;
+      max-width: 680px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .hero-sticker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+      color: #7b5562;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 999px;
+      padding: 0.45rem 0.95rem;
+      box-shadow: 0 8px 24px rgba(133, 96, 111, 0.11);
+      animation: bob 2.3s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .section {
+      margin: 1.4rem 0;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section:nth-of-type(2) { transition-delay: 0.06s; }
+    .section:nth-of-type(3) { transition-delay: 0.12s; }
+    .section:nth-of-type(4) { transition-delay: 0.18s; }
+    .section:nth-of-type(5) { transition-delay: 0.24s; }
+
+    .card {
+      background: var(--white-glass);
+      border: 1px solid rgba(255, 255, 255, 0.68);
+      border-radius: 22px;
+      box-shadow: var(--soft-shadow);
+      padding: clamp(1.4rem, 2.5vw, 2.2rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.28) 35%, transparent 70%);
+      transform: translateX(-120%);
+      animation: sheen 8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes sheen {
+      0%, 70% { transform: translateX(-120%); }
+      100% { transform: translateX(120%); }
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.4rem, 2.7vw, 2rem);
+      margin-bottom: 0.8rem;
+      color: #634650;
+    }
+
+    p {
+      font-size: clamp(0.98rem, 1.4vw, 1.12rem);
+      color: #5f4f55;
+      white-space: pre-line;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .photo {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 26px rgba(120, 86, 100, 0.18);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      transform: translateY(0);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .photo:hover {
+      transform: translateY(-6px) scale(1.015);
+      box-shadow: 0 16px 30px rgba(120, 86, 100, 0.24);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      animation: zoomInOut 10s ease-in-out infinite;
+    }
+
+    .photo figcaption {
+      font-size: 0.84rem;
+      color: #7a5a64;
+      padding: 0.45rem 0.65rem 0.65rem;
+      background: rgba(255, 255, 255, 0.86);
+      font-family: "Quicksand", sans-serif;
+    }
+
+    @keyframes zoomInOut {
+      0%, 100% { transform: scale(1.02); }
+      50% { transform: scale(1.08); }
+    }
+
+    .slideshow {
+      margin-top: 1rem;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 12px 28px rgba(121, 85, 100, 0.18);
+      background: linear-gradient(150deg, rgba(255, 255, 255, 0.86), rgba(255, 240, 246, 0.78));
+    }
+
+    .slide-frame {
+      position: relative;
+      height: 320px;
+      background: linear-gradient(180deg, rgba(255, 244, 249, 0.8), rgba(255, 236, 244, 0.75));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+    }
+
+    .slide-frame img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      border-radius: 12px;
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+
+    .slide-frame img.is-changing {
+      opacity: 0.35;
+      transform: scale(0.985);
+    }
+
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      color: #714f5b;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .slide-btn.prev { left: 0.6rem; }
+    .slide-btn.next { right: 0.6rem; }
+
+    .slide-caption {
+      font-family: "Quicksand", sans-serif;
+      font-size: 0.93rem;
+      color: #7b5964;
+      text-align: center;
+      padding: 0.55rem 0.7rem 0.25rem;
+      background: rgba(255, 255, 255, 0.85);
+      min-height: 2.5rem;
+    }
+
+    .slide-toolbar {
+      display: flex;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.6rem 0.1rem;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .slide-control {
+      border: 1px solid rgba(226, 173, 191, 0.8);
+      background: #fff7fb;
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.8rem;
+      color: #815e69;
+      cursor: pointer;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .slide-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.6rem 0.7rem;
+    }
+
+    .slide-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(166, 116, 134, 0.35);
+      cursor: pointer;
+    }
+
+    .slide-dot.active {
+      background: #c96c8d;
+    }
+
+    .slide-progress {
+      height: 4px;
+      background: rgba(166, 116, 134, 0.18);
+      margin: 0 0.75rem 0.65rem;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .slide-progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #ee9eb7, #d27899);
+      transition: width 0.12s linear;
+    }
+
+    .gallery-note {
+      margin-top: 0.6rem;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #825f6b;
+    }
+
+    .baby-highlight {
+      margin-top: 1rem;
+      padding: 1rem 1.1rem;
+      border-left: 4px solid rgba(232, 154, 172, 0.75);
+      background: rgba(255, 250, 238, 0.72);
+      border-radius: 12px;
+      font-weight: 500;
+      color: #6d5058;
+    }
+
+    .cute-row {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .cute-chip {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      font-family: "Quicksand", sans-serif;
+      font-size: 0.92rem;
+      color: #76545f;
+      box-shadow: 0 8px 18px rgba(134, 95, 110, 0.12);
+    }
+
+    .promise-wrap {
+      text-align: center;
+      margin-top: 1.2rem;
+    }
+
+    .promise-btn {
+      border: none;
+      background: linear-gradient(120deg, #f7c6d4, #ffe3ba);
+      color: #6f4b57;
+      padding: 0.65rem 1.05rem;
+      border-radius: 999px;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(132, 84, 101, 0.15);
+    }
+
+    .promise-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .letter-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(73, 47, 58, 0.38);
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.28s ease;
+      z-index: 20;
+    }
+
+    .letter-modal.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .letter-card {
+      width: min(720px, 100%);
+      background: #fffaf1;
+      border: 1px solid #f7d8de;
+      border-radius: 18px;
+      box-shadow: 0 18px 42px rgba(81, 53, 64, 0.25);
+      padding: 1.2rem 1.2rem 1rem;
+      color: #5f4651;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .game-box {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 10px 22px rgba(124, 83, 99, 0.12);
+    }
+
+    .game-title {
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.02rem;
+      color: #6f4b57;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+    }
+
+    .game-stats {
+      font-size: 0.9rem;
+      color: #7a5b65;
+      margin-bottom: 0.55rem;
+    }
+
+    .mini-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-family: "Quicksand", sans-serif;
+      color: #6f4b57;
+      background: linear-gradient(120deg, #ffd9e5, #fff0cb);
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(120, 79, 95, 0.13);
+      margin-right: 0.45rem;
+      margin-top: 0.4rem;
+    }
+
+    .tap-area {
+      position: relative;
+      height: 180px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255, 250, 238, 0.95), rgba(255, 237, 242, 0.9));
+      border: 1px dashed rgba(223, 164, 184, 0.6);
+      margin-top: 0.75rem;
+      overflow: hidden;
+    }
+
+    .tap-heart {
+      position: absolute;
+      border: none;
+      background: transparent;
+      font-size: 1.6rem;
+      cursor: pointer;
+      filter: drop-shadow(0 6px 8px rgba(192, 108, 138, 0.35));
+      transform: translate(-50%, -50%);
+    }
+
+    .quiz-choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .quiz-btn {
+      border: 1px solid rgba(242, 194, 209, 0.9);
+      border-radius: 12px;
+      background: #fff9fb;
+      padding: 0.58rem 0.5rem;
+      cursor: pointer;
+      color: #6e4e59;
+      font-family: "Quicksand", sans-serif;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .quiz-btn:hover {
+      transform: translateY(-1px);
+      background: #fff1f6;
+    }
+
+    .game-note {
+      margin-top: 0.65rem;
+      font-size: 0.9rem;
+      color: #7c5c66;
+      min-height: 1.35rem;
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.45rem;
+      margin-top: 0.75rem;
+    }
+
+    .memory-card {
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(130deg, #ffd4e2, #ffeecf);
+      color: transparent;
+      min-height: 54px;
+      font-size: 1.35rem;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(126, 80, 98, 0.12);
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .memory-card:hover {
+      transform: translateY(-1px);
+    }
+
+    .memory-card.revealed,
+    .memory-card.matched {
+      background: #fff9fc;
+      color: #744f5c;
+    }
+
+    .memory-card.matched {
+      background: #fff3d4;
+    }
+
+    .letter-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .close-letter {
+      border: none;
+      background: transparent;
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.8rem 0 0.8rem;
+      font-size: 0.96rem;
+      color: #6e5960;
+    }
+
+    .signature {
+      margin-top: 0.9rem;
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      color: #734f5c;
+      opacity: 0.95;
+    }
+
+    .pulse-heart {
+      display: inline-block;
+      animation: pulse 1.9s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+    }
+
+    @media (max-width: 860px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        height: 210px;
+      }
+
+      .slide-frame {
+        height: 260px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: auto;
+        padding-top: 1.2rem;
+      }
+
+      .container {
+        width: min(920px, 94%);
+      }
+
+      .card {
+        border-radius: 18px;
+      }
+
+      .audio-control {
+        justify-content: center;
+        position: static;
+        margin-bottom: 0.9rem;
+      }
+
+      .games-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .audio-btn {
+        padding: 0.72rem 0.95rem;
+        font-size: 0.9rem;
+      }
+
+      .hero-card {
+        padding: 1.25rem 1rem;
+      }
+
+      .hero-sticker {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .countdown-pill {
+        font-size: 0.84rem;
+        padding: 0.45rem 0.7rem;
+      }
+
+      .mini-btn {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .quiz-choices {
+        grid-template-columns: 1fr;
+      }
+
+      .memory-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .tap-area {
+        height: 155px;
+      }
+
+      .intro-title {
+        font-size: clamp(1.55rem, 7vw, 2.1rem);
+      }
+
+      .intro-sub {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .subtitle,
+      .soft-line,
+      p {
+        font-size: 0.95rem;
+      }
+
+      .audio-control {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .audio-btn {
+        width: 100%;
+      }
+
+      .surprise-pop {
+        right: 0.65rem;
+        bottom: 0.65rem;
+      }
+
+      .card {
+        padding: 1rem 0.9rem;
+      }
+
+      .photo img {
+        height: 180px;
+      }
+
+      .slide-frame {
+        height: 220px;
+      }
+
+      .game-title {
+        font-size: 0.98rem;
+      }
+
+      .game-stats,
+      .game-note {
+        font-size: 0.86rem;
+      }
+
+      .memory-card {
+        min-height: 48px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-content">
+      <div class="intro-title">From Adii to my GF & Mommy ❤️</div>
+      <div class="intro-sub">A little love letter across the distance...</div>
+    </div>
+  </div>
+
+  <div class="background-glow"></div>
+  <div class="sparkles"></div>
+  <div class="floating-layer hearts" id="hearts" aria-hidden="true"></div>
+  <div class="floating-layer bubbles" id="bubbles" aria-hidden="true"></div>
+  <div class="floating-layer balloons" id="balloons" aria-hidden="true"></div>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+  <main class="container">
+    <div class="audio-control">
+      <button class="audio-btn" id="musicBtn" type="button">🎵 Play Happy Birthday for Dio</button>
+      <button class="audio-btn" id="blessBtn" type="button">💖 Send love sparkles</button>
+      <button class="audio-btn surprise-btn" id="surpriseBtn" type="button">🎁 Surprise</button>
+    </div>
+    <div class="audio-warning" id="audioWarning"></div>
+    <audio id="webAudio" class="web-audio" preload="none"></audio>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Happy 2 Months Dio ❤️</h1>
+        <p class="subtitle">Two months of love, distance, and endless hope</p>
+        <p class="soft-line">“Even if we are far apart, my heart is always with you both.”</p>
+        <span class="hero-sticker">🍼 60 days of miracle + love ✨</span>
+        <div class="countdown-pill" id="loveCounter">Counting love...</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>Message from Father</h2>
+        <p>“I may be far away, but my love for you both is always close.
+Dio, you are only 2 months old, but you already changed my life forever.
+Every moment away from you both makes me love you even more.”</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>A Soft Memory Gallery</h2>
+        <p>These gentle moments are from your own folder, shown as a local slideshow for you and Dio.</p>
+        <div class="slideshow" id="localSlideshow">
+          <div class="slide-frame">
+            <img id="slideImage" src="images/dio1.jpg" alt="Dio local memory photo" loading="lazy" />
+            <button class="slide-btn prev" id="slidePrev" type="button" aria-label="Previous photo">‹</button>
+            <button class="slide-btn next" id="slideNext" type="button" aria-label="Next photo">›</button>
+          </div>
+          <div class="slide-caption" id="slideCaption">Our love story in little moments</div>
+          <div class="slide-toolbar">
+            <button class="slide-control" id="slidePlayPause" type="button">Pause Auto</button>
+            <button class="slide-control" id="slideShuffle" type="button">Shuffle</button>
+          </div>
+          <div class="slide-dots" id="slideDots"></div>
+          <div class="slide-progress"><div class="slide-progress-bar" id="slideProgressBar"></div></div>
+        </div>
+        <div class="gallery-note" id="galleryNote">Looking for photos in `images/dio1.jpg` to `images/dio8.jpg`</div>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>Message to Mommy</h2>
+        <p>“I’m sorry we are in a long-distance situation.
+I wish I could be there with you every day, holding you and our baby.
+Thank you for your strength, patience, and love.
+You are the heart of our family, and I appreciate everything you do.”</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>Our Little Dio</h2>
+        <p>Dio is now 2 months old - 60 days of love and growth.
+From first smiles to first cries, from sleepless nights to first memories,
+every little moment has become a forever memory in our hearts.</p>
+        <div class="baby-highlight">“You are our little miracle.”</div>
+        <div class="cute-row">
+          <span class="cute-chip">👶 First smiles</span>
+          <span class="cute-chip">🌙 Cozy nights</span>
+          <span class="cute-chip">🫶 Endless love</span>
+          <span class="cute-chip">✨ New memories</span>
+        </div>
+        <div class="promise-wrap">
+          <button class="promise-btn" id="promiseBtn" type="button">Read Daddy's Promise 💌</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>Mini Games for Mommy 🎮</h2>
+        <p>A tiny playful corner for you, Mommy, so your smile stays bright while waiting for us to be together.</p>
+        <div class="games-grid">
+          <div class="game-box">
+            <div class="game-title">Catch the Love Hearts</div>
+            <div class="game-stats" id="tapStats">Score: 0 | Time: 20s</div>
+            <button class="mini-btn" id="tapStart" type="button">Start Game</button>
+            <button class="mini-btn" id="tapReset" type="button">Reset</button>
+            <div class="tap-area" id="tapArea">
+              <button class="tap-heart" id="tapHeart" type="button" aria-label="Catch heart">💗</button>
+            </div>
+            <div class="game-note" id="tapNote">Tap the moving heart as many times as you can!</div>
+          </div>
+          <div class="game-box">
+            <div class="game-title">Mommy Love Quiz</div>
+            <div class="game-stats" id="quizStats">25 random questions from 100 | Score: 0</div>
+            <button class="mini-btn" id="quizStart" type="button">Start Quiz</button>
+            <div class="game-note" id="quizQuestion">Press start to play 💕</div>
+            <div class="quiz-choices" id="quizChoices"></div>
+            <div class="game-note" id="quizResult"></div>
+          </div>
+          <div class="game-box">
+            <div class="game-title">Dio Memory Match</div>
+            <div class="game-stats" id="memoryStats">Matches: 0/6 | Moves: 0</div>
+            <button class="mini-btn" id="memoryStart" type="button">New Round</button>
+            <div class="memory-grid" id="memoryGrid"></div>
+            <div class="game-note" id="memoryNote">Match all cards to win a warm hug from Adii 🤍</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="section visible">
+      Built with love, distance, and hope from Adii to my GF and Mommy for our son Dio
+      <span class="pulse-heart">❤️</span>
+      <div class="signature">Forever yours, Adii - Daddy for Dio</div>
+    </footer>
+  </main>
+
+  <aside class="surprise-pop" id="surprisePop" aria-hidden="true">
+    <h3>Happy 2 Months, Dio! 🎈</h3>
+    <p>From Adii to Mommy and our little miracle - may every day be filled with laughter, kisses, and warm hugs.</p>
+    <button class="slide-control" id="closeSurprise" type="button">Close</button>
+  </aside>
+
+  <aside class="letter-modal" id="letterModal" aria-hidden="true">
+    <div class="letter-card">
+      <div class="letter-head">
+        <h2>A Promise For You Both</h2>
+        <button class="close-letter" id="closeLetter" type="button" aria-label="Close letter">✕</button>
+      </div>
+      <p id="typedLetter"></p>
+    </div>
+  </aside>
+
+  <script>
+    (function createHearts() {
+      const heartsWrap = document.getElementById("hearts");
+      const colors = ["#f5b7c7", "#f9cfd9", "#ffdfe6", "#fbc2d1", "#f6d4e0"];
+      const total = 30;
+
+      for (let i = 0; i < total; i += 1) {
+        const h = document.createElement("span");
+        h.className = "heart";
+        h.style.left = Math.random() * 100 + "vw";
+        h.style.background = colors[Math.floor(Math.random() * colors.length)];
+        h.style.animationDuration = 9 + Math.random() * 11 + "s";
+        h.style.animationDelay = Math.random() * 12 + "s";
+        h.style.opacity = (0.2 + Math.random() * 0.45).toFixed(2);
+        const size = 8 + Math.random() * 13;
+        h.style.width = size + "px";
+        h.style.height = size + "px";
+        heartsWrap.appendChild(h);
+      }
+    })();
+
+    (function createBubbles() {
+      const bubblesWrap = document.getElementById("bubbles");
+      const total = 20;
+      for (let i = 0; i < total; i += 1) {
+        const bubble = document.createElement("span");
+        bubble.className = "bubble";
+        const size = 7 + Math.random() * 18;
+        bubble.style.width = size + "px";
+        bubble.style.height = size + "px";
+        bubble.style.left = Math.random() * 100 + "vw";
+        bubble.style.animationDuration = 12 + Math.random() * 11 + "s";
+        bubble.style.animationDelay = Math.random() * 10 + "s";
+        bubblesWrap.appendChild(bubble);
+      }
+    })();
+
+    (function createBalloons() {
+      const balloonsWrap = document.getElementById("balloons");
+      const colors = ["#f8b7cb", "#ffd9a8", "#cde7ff", "#f8c7d9", "#ffe6b8"];
+      const total = 16;
+      for (let i = 0; i < total; i += 1) {
+        const b = document.createElement("span");
+        b.className = "balloon";
+        b.style.left = Math.random() * 100 + "vw";
+        b.style.background = colors[i % colors.length];
+        b.style.animationDuration = 14 + Math.random() * 14 + "s";
+        b.style.animationDelay = Math.random() * 10 + "s";
+        const size = 18 + Math.random() * 16;
+        b.style.width = size + "px";
+        b.style.height = size * 1.25 + "px";
+        balloonsWrap.appendChild(b);
+      }
+    })();
+
+    (function fadeInOnScroll() {
+      const sections = document.querySelectorAll(".section");
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16 });
+
+      sections.forEach((sec) => {
+        if (!sec.classList.contains("visible")) io.observe(sec);
+      });
+    })();
+
+    (function setupWebMusic() {
+      const btn = document.getElementById("musicBtn");
+      const audio = document.getElementById("webAudio");
+      const warning = document.getElementById("audioWarning");
+      const birthdaySong = {
+        title: "Happy Birthday Instrumental for Dio",
+        url: "audio/happy-birthday.mp3"
+      };
+      let isPlaying = false;
+
+      function setStoppedLabel() {
+        btn.textContent = "🎵 Play Happy Birthday for Dio";
+      }
+
+      function setPlayingLabel() {
+        btn.textContent = "🔈 Pause: " + birthdaySong.title;
+      }
+
+      async function playBirthdaySong() {
+        audio.src = birthdaySong.url;
+        warning.textContent = "";
+        try {
+          await audio.play();
+          isPlaying = true;
+          setPlayingLabel();
+        } catch (err) {
+          isPlaying = false;
+          setStoppedLabel();
+          warning.textContent = "Couldn't play music. Make sure audio/happy-birthday.mp3 exists.";
+        }
+      }
+
+      btn.addEventListener("click", () => {
+        if (isPlaying) {
+          audio.pause();
+          isPlaying = false;
+          setStoppedLabel();
+        } else {
+          playBirthdaySong();
+        }
+      });
+
+      audio.addEventListener("ended", () => {
+        isPlaying = false;
+        setStoppedLabel();
+      });
+
+      audio.addEventListener("error", () => {
+        isPlaying = false;
+        setStoppedLabel();
+        warning.textContent = "Audio file missing: upload audio/happy-birthday.mp3";
+      });
+
+      audio.addEventListener("pause", () => {
+        if (!audio.ended) {
+          isPlaying = false;
+          setStoppedLabel();
+        }
+      });
+    })();
+
+    (function setupLoveCounter() {
+      const box = document.getElementById("loveCounter");
+      const startDate = new Date("2026-02-12T00:00:00");
+      function render() {
+        const now = new Date();
+        const diff = Math.max(0, now - startDate);
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        box.textContent = "Together in heart for " + days + " days and " + hours + " hours";
+      }
+      render();
+      setInterval(render, 60000);
+    })();
+
+    (function setupSparkleBurst() {
+      const trigger = document.getElementById("blessBtn");
+      const layer = document.getElementById("hearts");
+      trigger.addEventListener("click", () => {
+        for (let i = 0; i < 14; i += 1) {
+          const h = document.createElement("span");
+          h.className = "heart";
+          h.style.left = 44 + Math.random() * 12 + "vw";
+          h.style.bottom = "10vh";
+          h.style.background = ["#ffd2e1", "#f6b9cd", "#ffe6ef"][i % 3];
+          h.style.animationDuration = 3.5 + Math.random() * 2 + "s";
+          h.style.opacity = "0.85";
+          h.style.width = "12px";
+          h.style.height = "12px";
+          layer.appendChild(h);
+          setTimeout(() => h.remove(), 5200);
+        }
+      });
+    })();
+
+    (function setupSurprise() {
+      const btn = document.getElementById("surpriseBtn");
+      const pop = document.getElementById("surprisePop");
+      const closeBtn = document.getElementById("closeSurprise");
+      const layer = document.getElementById("confettiLayer");
+
+      function burstConfetti() {
+        const colors = ["#ffb6cb", "#ffdca6", "#cfe7ff", "#f8c2d3", "#ffeabf"];
+        for (let i = 0; i < 80; i += 1) {
+          const c = document.createElement("span");
+          c.className = "confetti";
+          c.style.left = Math.random() * 100 + "vw";
+          c.style.background = colors[i % colors.length];
+          c.style.animationDuration = 2.4 + Math.random() * 2.6 + "s";
+          c.style.animationDelay = Math.random() * 0.3 + "s";
+          c.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+          layer.appendChild(c);
+          setTimeout(() => c.remove(), 5200);
+        }
+      }
+
+      function openSurprise() {
+        pop.classList.add("show");
+        pop.setAttribute("aria-hidden", "false");
+        burstConfetti();
+      }
+
+      function closeSurprise() {
+        pop.classList.remove("show");
+        pop.setAttribute("aria-hidden", "true");
+      }
+
+      btn.addEventListener("click", openSurprise);
+      closeBtn.addEventListener("click", closeSurprise);
+    })();
+
+    (function setupPromiseLetter() {
+      const modal = document.getElementById("letterModal");
+      const openBtn = document.getElementById("promiseBtn");
+      const closeBtn = document.getElementById("closeLetter");
+      const target = document.getElementById("typedLetter");
+      const fullText = "No distance can reduce my love for you. I promise to keep choosing you, to keep being grateful for your strength, and to be the father Dio deserves every single day. One day this distance will be a memory, but this love will stay forever.";
+      let timer;
+
+      function typeText() {
+        target.textContent = "";
+        let i = 0;
+        clearInterval(timer);
+        timer = setInterval(() => {
+          target.textContent += fullText[i];
+          i += 1;
+          if (i >= fullText.length) clearInterval(timer);
+        }, 22);
+      }
+
+      function openModal() {
+        modal.classList.add("show");
+        modal.setAttribute("aria-hidden", "false");
+        typeText();
+      }
+
+      function closeModal() {
+        modal.classList.remove("show");
+        modal.setAttribute("aria-hidden", "true");
+      }
+
+      openBtn.addEventListener("click", openModal);
+      closeBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+    })();
+
+    (function introFadeOut() {
+      const intro = document.getElementById("introOverlay");
+      window.setTimeout(() => {
+        intro.classList.add("hide");
+      }, 1900);
+    })();
+
+    (function setupLocalSlideshow() {
+      const slideImage = document.getElementById("slideImage");
+      const slideCaption = document.getElementById("slideCaption");
+      const slidePrev = document.getElementById("slidePrev");
+      const slideNext = document.getElementById("slideNext");
+      const slideDots = document.getElementById("slideDots");
+      const galleryNote = document.getElementById("galleryNote");
+      const slidePlayPause = document.getElementById("slidePlayPause");
+      const slideShuffle = document.getElementById("slideShuffle");
+      const slideProgressBar = document.getElementById("slideProgressBar");
+      const slideshow = document.getElementById("localSlideshow");
+
+      const captions = [
+        "Our love story in little moments",
+        "Every photo keeps us close",
+        "Dio, our little miracle",
+        "Mommy's strength is beautiful",
+        "A family bound by love"
+      ];
+
+      function checkImage(path) {
+        return new Promise((resolve) => {
+          const test = new Image();
+          test.onload = () => resolve(true);
+          test.onerror = () => resolve(false);
+          test.src = path;
+        });
+      }
+
+      async function gatherLocalImages() {
+        const result = [];
+        for (let i = 1; i <= 8; i += 1) {
+          const path = "images/dio" + i + ".jpg";
+          const exists = await checkImage(path);
+          if (exists) result.push(path);
+        }
+        return result;
+      }
+
+      let images = [];
+      let current = 0;
+      let timer = null;
+      let progressTimer = null;
+      let isAutoPlaying = true;
+      const autoDelay = 3500;
+      let startedAt = 0;
+
+      function renderDots() {
+        slideDots.innerHTML = "";
+        images.forEach((_, i) => {
+          const dot = document.createElement("button");
+          dot.className = "slide-dot" + (i === current ? " active" : "");
+          dot.type = "button";
+          dot.setAttribute("aria-label", "Go to photo " + (i + 1));
+          dot.addEventListener("click", () => {
+            current = i;
+            renderSlide();
+            restartAutoPlay();
+          });
+          slideDots.appendChild(dot);
+        });
+      }
+
+      function renderSlide() {
+        if (!images.length) return;
+        slideImage.classList.add("is-changing");
+        slideImage.src = images[current];
+        slideCaption.textContent = captions[current % captions.length];
+        Array.from(slideDots.children).forEach((dot, i) => {
+          dot.classList.toggle("active", i === current);
+        });
+        setTimeout(() => slideImage.classList.remove("is-changing"), 120);
+      }
+
+      function nextSlide() {
+        if (!images.length) return;
+        current = (current + 1) % images.length;
+        renderSlide();
+      }
+
+      function prevSlide() {
+        if (!images.length) return;
+        current = (current - 1 + images.length) % images.length;
+        renderSlide();
+      }
+
+      function restartAutoPlay() {
+        if (timer) clearInterval(timer);
+        if (progressTimer) clearInterval(progressTimer);
+        if (!isAutoPlaying) return;
+        startedAt = Date.now();
+        slideProgressBar.style.width = "0%";
+        progressTimer = setInterval(() => {
+          const elapsed = Date.now() - startedAt;
+          const ratio = Math.min(100, (elapsed / autoDelay) * 100);
+          slideProgressBar.style.width = ratio + "%";
+        }, 100);
+        timer = setInterval(() => {
+          nextSlide();
+          startedAt = Date.now();
+          slideProgressBar.style.width = "0%";
+        }, autoDelay);
+      }
+
+      slideNext.addEventListener("click", () => {
+        nextSlide();
+        restartAutoPlay();
+      });
+      slidePrev.addEventListener("click", () => {
+        prevSlide();
+        restartAutoPlay();
+      });
+      slidePlayPause.addEventListener("click", () => {
+        isAutoPlaying = !isAutoPlaying;
+        slidePlayPause.textContent = isAutoPlaying ? "Pause Auto" : "Play Auto";
+        restartAutoPlay();
+      });
+      slideShuffle.addEventListener("click", () => {
+        images = shuffleArray(images);
+        current = 0;
+        renderDots();
+        renderSlide();
+        restartAutoPlay();
+      });
+      slideshow.addEventListener("mouseenter", () => {
+        if (!isAutoPlaying) return;
+        clearInterval(timer);
+        clearInterval(progressTimer);
+      });
+      slideshow.addEventListener("mouseleave", () => {
+        if (!isAutoPlaying) return;
+        restartAutoPlay();
+      });
+
+      gatherLocalImages().then((found) => {
+        images = found;
+        if (!images.length) {
+          galleryNote.textContent = "No local photos found yet. Add images/dio1.jpg, dio2.jpg ... up to dio8.jpg";
+          slideCaption.textContent = "Waiting for your local photos";
+          slideImage.style.opacity = "0.25";
+          slidePrev.style.display = "none";
+          slideNext.style.display = "none";
+          slidePlayPause.style.display = "none";
+          slideShuffle.style.display = "none";
+          slideProgressBar.style.width = "0%";
+          return;
+        }
+        galleryNote.textContent = "Loaded " + images.length + " local photo(s) from your folder";
+        current = 0;
+        renderDots();
+        renderSlide();
+        restartAutoPlay();
+      });
+    })();
+
+    (function setupMommyGames() {
+      const tapArea = document.getElementById("tapArea");
+      const tapHeart = document.getElementById("tapHeart");
+      const tapStart = document.getElementById("tapStart");
+      const tapReset = document.getElementById("tapReset");
+      const tapStats = document.getElementById("tapStats");
+      const tapNote = document.getElementById("tapNote");
+      let tapScore = 0;
+      let timeLeft = 20;
+      let tapTimer = null;
+      let gameRunning = false;
+
+      function moveHeart() {
+        const areaRect = tapArea.getBoundingClientRect();
+        const x = 20 + Math.random() * (areaRect.width - 40);
+        const y = 20 + Math.random() * (areaRect.height - 40);
+        tapHeart.style.left = x + "px";
+        tapHeart.style.top = y + "px";
+      }
+
+      function updateTapStats() {
+        tapStats.textContent = "Score: " + tapScore + " | Time: " + timeLeft + "s";
+      }
+
+      function startTapGame() {
+        tapScore = 0;
+        timeLeft = 20;
+        gameRunning = true;
+        tapNote.textContent = "Go Mommy! Catch all the hearts 💗";
+        updateTapStats();
+        moveHeart();
+        clearInterval(tapTimer);
+        tapTimer = setInterval(() => {
+          timeLeft -= 1;
+          updateTapStats();
+          if (timeLeft <= 0) {
+            clearInterval(tapTimer);
+            gameRunning = false;
+            tapNote.textContent = "Time's up! You caught " + tapScore + " hearts! 🌸";
+          }
+        }, 1000);
+      }
+
+      tapHeart.addEventListener("click", () => {
+        if (!gameRunning) return;
+        tapScore += 1;
+        updateTapStats();
+        moveHeart();
+      });
+
+      tapStart.addEventListener("click", startTapGame);
+      tapReset.addEventListener("click", () => {
+        clearInterval(tapTimer);
+        tapScore = 0;
+        timeLeft = 20;
+        gameRunning = false;
+        updateTapStats();
+        tapNote.textContent = "Tap the moving heart as many times as you can!";
+      });
+
+      updateTapStats();
+      moveHeart();
+
+      const quizStart = document.getElementById("quizStart");
+      const quizStats = document.getElementById("quizStats");
+      const quizQuestion = document.getElementById("quizQuestion");
+      const quizChoices = document.getElementById("quizChoices");
+      const quizResult = document.getElementById("quizResult");
+
+      function shuffleArray(arr) {
+        const copy = arr.slice();
+        for (let i = copy.length - 1; i > 0; i -= 1) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = copy[i];
+          copy[i] = copy[j];
+          copy[j] = temp;
+        }
+        return copy;
+      }
+
+      function buildQuestionBank() {
+        const memories = [
+          "first smile", "sleepy cuddles", "tiny fingers", "night lullabies", "morning kisses",
+          "cozy blanket time", "little yawns", "soft giggles", "warm hugs", "baby stretches",
+          "tiny heartbeat moments", "gentle rocking", "milk time", "sweet dreams", "happy coos",
+          "bath time splashes", "small hiccups", "calm evenings", "sunrise snuggles", "family cuddle moments"
+        ];
+        const promises = [
+          "protecting our family", "choosing love every day", "being patient", "staying faithful",
+          "supporting mommy", "working hard for us", "being present in heart", "never giving up",
+          "building our future", "praying for our home", "learning to be better", "making Dio proud",
+          "keeping hope alive", "sharing joy", "speaking kindly", "staying gentle",
+          "remembering gratitude", "holding on together", "valuing every moment", "loving endlessly"
+        ];
+        const cuteNouns = [
+          "our little miracle", "our sunshine", "our tiny blessing", "our heartbeat", "our forever joy",
+          "our sweetest gift", "our moonlight", "our precious baby", "our dream come true", "our biggest blessing",
+          "our home in one smile", "our tiny angel", "our calm after storms", "our gentle happiness", "our new beginning",
+          "our little star", "our daily wonder", "our softest joy", "our forever reason", "our family light"
+        ];
+        const loveWays = [
+          "through video calls", "through prayers", "through patience", "through trust", "through daily messages",
+          "through small updates", "through warm words", "through understanding", "through forgiveness", "through loyalty",
+          "through teamwork", "through soft kindness", "through hope", "through little check-ins", "through shared dreams",
+          "through late-night talks", "through long hugs in our minds", "through gratitude", "through laughter", "through faith"
+        ];
+        const comfortingWords = [
+          "You are enough.", "You are deeply loved.", "You are my safe place.", "You are our family's hero.",
+          "You are never alone.", "You make every day brighter.", "You are stronger than distance.", "You are my forever choice.",
+          "You are the heart of our home.", "You are precious to me.", "You are doing amazing.", "You are my peace.",
+          "You are my answered prayer.", "You are my warmest thought.", "You are beautiful inside out.", "You are pure love.",
+          "You are our blessing.", "You are mommy magic.", "You are my home.", "You are adored every day."
+        ];
+
+        const bank = [];
+
+        for (let i = 0; i < 20; i += 1) {
+          bank.push({
+            q: "Which memory makes Adii smile the most? (" + memories[i] + ")",
+            answer: memories[i],
+            choices: shuffleArray([memories[i], "being far away", "empty silence", "no memories"])
+          });
+          bank.push({
+            q: "What does Adii promise about " + promises[i] + "?",
+            answer: "Always",
+            choices: shuffleArray(["Always", "Only sometimes", "Never", "Maybe next year"])
+          });
+          bank.push({
+            q: "Dio is " + cuteNouns[i] + " - true or false?",
+            answer: "True",
+            choices: shuffleArray(["True", "False", "Not sure", "Only on weekends"])
+          });
+          bank.push({
+            q: "How do we keep love alive " + loveWays[i] + "?",
+            answer: "With all our heart",
+            choices: shuffleArray(["With all our heart", "By giving up", "By ignoring each other", "By forgetting"])
+          });
+          bank.push({
+            q: "Pick the sweetest message for Mommy:",
+            answer: comfortingWords[i],
+            choices: shuffleArray([comfortingWords[i], "You are ordinary.", "No need for love.", "Distance wins."])
+          });
+        }
+
+        return bank; // 100 questions total
+      }
+
+      const allQuestions = buildQuestionBank();
+      let activeQuestions = [];
+      let qIndex = 0;
+      let qScore = 0;
+      let qWrong = 0;
+
+      function renderQuestion() {
+        const current = activeQuestions[qIndex];
+        quizQuestion.textContent = current.q;
+        quizChoices.innerHTML = "";
+        current.choices.forEach((choice) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "quiz-btn";
+          btn.textContent = choice;
+          btn.addEventListener("click", () => chooseAnswer(choice));
+          quizChoices.appendChild(btn);
+        });
+        quizStats.textContent = "Question " + (qIndex + 1) + " of " + activeQuestions.length + " | Score: " + qScore + " | Wrong: " + qWrong + " (Kisses: " + (qWrong * 100) + ")";
+      }
+
+      function chooseAnswer(choice) {
+        if (choice === activeQuestions[qIndex].answer) {
+          qScore += 1;
+          quizResult.textContent = "Correct 💖";
+        } else {
+          qWrong += 1;
+          quizResult.textContent = "Wrong answer = 100 kisses for Adii 😘";
+        }
+        qIndex += 1;
+        if (qIndex < activeQuestions.length) {
+          setTimeout(renderQuestion, 500);
+        } else {
+          quizQuestion.textContent = "Finished! You scored " + qScore + "/" + activeQuestions.length;
+          quizChoices.innerHTML = "";
+          quizStats.textContent = "Quiz complete | Score: " + qScore + " | Wrong: " + qWrong + " | Kisses owed: " + (qWrong * 100);
+          quizResult.textContent = "Game over, Mommy! Final kiss count for Adii: " + (qWrong * 100) + " 💋";
+        }
+      }
+
+      quizStart.addEventListener("click", () => {
+        activeQuestions = shuffleArray(allQuestions).slice(0, 25);
+        qIndex = 0;
+        qScore = 0;
+        qWrong = 0;
+        quizResult.textContent = "";
+        renderQuestion();
+      });
+
+      const memoryStart = document.getElementById("memoryStart");
+      const memoryGrid = document.getElementById("memoryGrid");
+      const memoryStats = document.getElementById("memoryStats");
+      const memoryNote = document.getElementById("memoryNote");
+      const memoryIcons = ["👶", "🍼", "💗", "🌙", "✨", "🧸"];
+      let deck = [];
+      let openCards = [];
+      let lockBoard = false;
+      let matches = 0;
+      let moves = 0;
+
+      function updateMemoryStats() {
+        memoryStats.textContent = "Matches: " + matches + "/6 | Moves: " + moves;
+      }
+
+      function renderMemoryCards() {
+        memoryGrid.innerHTML = "";
+        deck.forEach((icon, index) => {
+          const card = document.createElement("button");
+          card.type = "button";
+          card.className = "memory-card";
+          card.dataset.icon = icon;
+          card.dataset.index = String(index);
+          card.textContent = "❤";
+          card.addEventListener("click", () => flipCard(card));
+          memoryGrid.appendChild(card);
+        });
+      }
+
+      function setupMemoryGame() {
+        deck = shuffleArray(memoryIcons.concat(memoryIcons));
+        openCards = [];
+        lockBoard = false;
+        matches = 0;
+        moves = 0;
+        updateMemoryStats();
+        memoryNote.textContent = "Match all cards to win a warm hug from Adii 🤍";
+        renderMemoryCards();
+      }
+
+      function hideCard(card) {
+        card.classList.remove("revealed");
+        card.textContent = "❤";
+      }
+
+      function flipCard(card) {
+        if (lockBoard || card.classList.contains("matched") || card.classList.contains("revealed")) return;
+        card.classList.add("revealed");
+        card.textContent = card.dataset.icon;
+        openCards.push(card);
+        if (openCards.length < 2) return;
+
+        moves += 1;
+        const [first, second] = openCards;
+        if (first.dataset.icon === second.dataset.icon) {
+          first.classList.add("matched");
+          second.classList.add("matched");
+          openCards = [];
+          matches += 1;
+          updateMemoryStats();
+          if (matches === memoryIcons.length) {
+            memoryNote.textContent = "Perfect, Mommy! You matched all cards in " + moves + " moves 💞";
+          }
+        } else {
+          lockBoard = true;
+          updateMemoryStats();
+          setTimeout(() => {
+            hideCard(first);
+            hideCard(second);
+            openCards = [];
+            lockBoard = false;
+          }, 700);
+        }
+      }
+
+      memoryStart.addEventListener("click", setupMemoryGame);
+      setupMemoryGame();
+    })();
+  </script>
+</body>
+</html>
